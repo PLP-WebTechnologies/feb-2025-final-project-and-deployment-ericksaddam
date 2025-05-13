@@ -1,5 +1,7 @@
 # SaddamStyles E-commerce Website Documentation
 
+Github Page Project Live URL: https://plp-webtechnologies.github.io/feb-2025-final-project-and-deployment-ericksaddam/
+
 ## Overview
 SaddamStyles is a modern e-commerce platform specializing in fashion retail. This documentation provides comprehensive information about the project's architecture, features, and implementation details.
 

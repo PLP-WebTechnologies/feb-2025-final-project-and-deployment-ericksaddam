@@ -1,5 +1,5 @@
 # Final Project and Deployment
-
+Github Page Project Live URL: https://plp-webtechnologies.github.io/feb-2025-final-project-and-deployment-ericksaddam/
 ## Objectives
 Build a fully functional web application.
 Apply HTML, CSS, and JavaScript concepts learned.
@@ -22,4 +22,5 @@ Create a well-structured HTML5 document.
 Use at least 5 different HTML elements.
 Ensure semantic correctness.
 
+gihub page live url: https://plp-webtechnologies.github.io/feb-2025-final-project-and-deployment-ericksaddam/
 Good luck and happy coding! 🚀💻
