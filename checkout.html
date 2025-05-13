@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaddamStyles - Checkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/simple-modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/checkout-new.css?v=1.0">
+</head>
+<body class="checkout-page">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>SaddamStyles</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" id="login-link">Login</a></li>
+                    <li><a href="#" id="account-link" style="display: none;"><i class="fas fa-user"></i> <span id="user-name">Account</span></a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Checkout</h2>
+            <p>Complete your purchase securely</p>
+        </div>
+    </section>
+
+    <section class="auth-section checkout-section">
+        <div class="container">
+            <div class="auth-container checkout-container">
+                <div class="checkout-steps">
+                    <div class="step active">
+                        <div class="step-number">1</div>
+                        <div class="step-text">Shipping</div>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-text">Payment</div>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-text">Confirmation</div>
+                    </div>
+                </div>
+                
+                <div class="checkout-forms">
+                    <!-- Shipping Form -->
+                    <div class="checkout-form active" id="shipping-form">
+                        <h3>Complete Your Order</h3>
+                        <p>Please provide your shipping details to continue with your purchase</p>
+                        <form id="shipping-info-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">First Name</label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-user"></i>
+                                        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">Last Name</label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-user"></i>
+                                        <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-home"></i>
+                                    <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-city"></i>
+                                        <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="postal-code">Postal Code</label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <input type="text" id="postal-code" name="postal-code" placeholder="Enter postal code" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-globe-africa"></i>
+                                    <select id="country" name="country" required>
+                                        <option value="">Select Country</option>
+                                        <option value="kenya">Kenya</option>
+                                        <option value="uganda">Uganda</option>
+                                        <option value="tanzania">Tanzania</option>
+                                        <option value="rwanda">Rwanda</option>
+                                        <option value="ethiopia">Ethiopia</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-phone"></i>
+                                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-buttons">
+                                <button type="button" class="btn btn-back" onclick="window.location.href='products.html'">Back to Cart</button>
+                                <button type="button" id="shipping-next" class="btn btn-next">Continue to Payment <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Payment Form -->
+                    <div class="checkout-form" id="payment-form">
+                        <h3>Payment Method</h3>
+                        <form id="payment-info-form">
+                            <div class="payment-methods">
+                                <div class="payment-method" id="mpesa-method">
+                                    <div class="payment-method-header">
+                                        <div class="payment-method-radio"></div>
+                                        <div class="payment-method-title"><i class="fas fa-mobile-alt"></i> M-Pesa</div>
+                                    </div>
+                                    <div class="payment-method-content" id="mpesa-content">
+                                        <div class="form-group">
+                                            <label for="phone-number">Phone Number</label>
+                                            <div class="input-with-icon">
+                                                <i class="fas fa-mobile-alt"></i>
+                                                <input type="text" id="phone-number" name="phone-number" placeholder="+254 7XX XXX XXX">
+                                            </div>
+                                            <span class="error-message" id="phone-number-error"></span>
+                                        </div>
+                                        <p class="payment-info">You will receive an M-Pesa prompt on your phone to complete the payment.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="payment-method" id="credit-card-method">
+                                    <div class="payment-method-header">
+                                        <div class="payment-method-radio"></div>
+                                        <div class="payment-method-title"><i class="fas fa-credit-card"></i> Credit Card</div>
+                                    </div>
+                                    <div class="payment-method-content" id="credit-card-content">
+                                        <div class="form-group">
+                                            <label for="card-number">Card Number</label>
+                                            <div class="input-with-icon">
+                                                <i class="fas fa-credit-card"></i>
+                                                <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
+                                            </div>
+                                            <span class="error-message" id="card-number-error"></span>
+                                        </div>
+                                        
+                                        <div class="form-row">
+                                            <div class="form-col">
+                                                <div class="form-group">
+                                                    <label for="expiry-date">Expiry Date</label>
+                                                    <div class="input-with-icon">
+                                                        <i class="fas fa-calendar-alt"></i>
+                                                        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY">
+                                                    </div>
+                                                    <span class="error-message" id="expiry-date-error"></span>
+                                                </div>
+                                            </div>
+                                            <div class="form-col">
+                                                <div class="form-group">
+                                                    <label for="cvv">CVV</label>
+                                                    <div class="input-with-icon">
+                                                        <i class="fas fa-lock"></i>
+                                                        <input type="text" id="cvv" name="cvv" placeholder="123">
+                                                    </div>
+                                                    <span class="error-message" id="cvv-error"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="payment-method" id="paypal-method">
+                                    <div class="payment-method-header">
+                                        <div class="payment-method-radio"></div>
+                                        <div class="payment-method-title"><i class="fab fa-paypal"></i> PayPal</div>
+                                    </div>
+                                    <div class="payment-method-content" id="paypal-content">
+                                        <p>You will be redirected to PayPal to complete your payment.</p>
+                                        <div class="paypal-logo">
+                                            <img src="images/paypal-logo.png" alt="PayPal" onerror="this.src='https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_111x69.jpg'; this.onerror=null;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-buttons">
+                                <button type="button" id="payment-back" class="btn btn-back"><i class="fas fa-arrow-left"></i> Back to Shipping</button>
+                                <button type="button" id="payment-next" class="btn btn-next">Place Order <i class="fas fa-check"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Confirmation -->
+                    <div class="checkout-form" id="confirmation">
+                        <div class="order-success">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Order Placed Successfully!</h3>
+                            <p>Thank you for your purchase. Your order has been received and is being processed. You will receive a confirmation email shortly.</p>
+                            <p>Order #: <span id="order-number">SH25051300123</span></p>
+                            <p>A confirmation email has been sent to your email address.</p>
+                            
+                            <div class="form-buttons">
+                                <button type="button" class="btn" onclick="window.location.href='index.html'">Continue Shopping</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="auth-image">
+                    <img src="images/autumn clothing.jpg" alt="Checkout" onerror="this.src='https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'; this.onerror=null;">
+                    <div class="auth-overlay">
+                        <h3>Complete Your Purchase</h3>
+                        <p>Just a few steps away from your new style</p>
+                    </div>
+                </div>
+                
+                <div class="order-summary" id="order-summary">
+                    <h3>Order Summary</h3>
+                    <div id="checkout-items">
+                        <!-- Items will be populated by JavaScript -->
+                    </div>
+                    
+                    <div class="summary-totals">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="subtotal">KSh 0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span id="shipping-cost">KSh 500</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax (16% VAT)</span>
+                            <span id="tax">KSh 0</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span id="total">KSh 0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SaddamStyles</h3>
+                    <p>Your one-stop shop for trendy fashion items.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@saddamstyles.com</p>
+                    <p>Phone: +1 (123) 456-7890</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 SaddamStyles. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Component -->
+    <div id="modal-container" class="modal-container">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modal-title">Success</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-content">
+                    <div class="modal-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div id="modal-message" class="modal-message"></div>
+                </div>
+                <div id="modal-product" class="modal-product">
+                    <img id="modal-product-image" src="" alt="Product">
+                    <div class="modal-product-details">
+                        <h4 id="modal-product-name"></h4>
+                        <p id="modal-product-price"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="modal-continue" class="btn">Continue Shopping</button>
+                <a href="index.html" id="modal-checkout" class="btn btn-primary">Go to Home</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Simple Modal Structure -->
+    <div class="simple-modal-container" id="simple-modal-container">
+        <div class="simple-modal">
+            <button class="simple-modal-close" id="simple-modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="simple-modal-header">
+                <h3 class="simple-modal-title" id="simple-modal-title">Modal Title</h3>
+            </div>
+            <div class="simple-modal-body">
+                <p class="simple-modal-message" id="simple-modal-message">Modal message goes here.</p>
+            </div>
+            <div class="simple-modal-footer">
+                <button class="simple-modal-button" id="simple-modal-button">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

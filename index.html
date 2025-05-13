@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaddamStyles - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/simple-modal.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>SaddamStyles</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" id="login-link">Login</a></li>
+                    <li><a href="#" id="account-link" style="display: none;"><i class="fas fa-user"></i> <span id="user-name">Account</span></a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Welcome to SaddamStyles</h2>
+                <p>Discover the latest trends in fashion</p>
+                <a href="products.html" class="btn">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="product-slider">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/tshirt.jpg" alt="Casual T-Shirt">
+                    </div>
+                    <div class="product-info">
+                        <h3>Casual T-Shirt</h3>
+                        <p class="price">KSh 3,499</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/jeans.jpg" alt="Denim Jeans">
+                    </div>
+                    <div class="product-info">
+                        <h3>Denim Jeans</h3>
+                        <p class="price">KSh 5,999</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/jackets.jpg" alt="Leather Jacket">
+                    </div>
+                    <div class="product-info">
+                        <h3>Leather Jacket</h3>
+                        <p class="price">KSh 11,999</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <p>"I love the quality of the products. Will definitely shop again!"</p>
+                    <h4>- Erick Saddam</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"Fast shipping and excellent customer service. Highly recommended!"</p>
+                    <h4>- Michael Kimani</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get the latest updates on new products and special promotions</p>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+            <p id="newsletter-message"></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SaddamStyles</h3>
+                    <p>Your one-stop shop for trendy fashion items.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@saddamstyles.com</p>
+                    <p>Phone: +1 (123) 456-7890</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 SaddamStyles. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Original Modal Component -->
+    <div id="modal-container" class="modal-container">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modal-title">Success</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-content">
+                    <div class="modal-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div id="modal-message" class="modal-message"></div>
+                </div>
+                <div id="modal-product" class="modal-product">
+                    <img id="modal-product-image" src="" alt="Product">
+                    <div class="modal-product-details">
+                        <h4 id="modal-product-name"></h4>
+                        <p id="modal-product-price"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="modal-continue" class="btn">Continue Shopping</button>
+                <a href="checkout.html" id="modal-checkout" class="btn btn-primary">View Cart</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Simple Modal Component -->
+    <div id="simple-modal" class="simple-modal">
+        <div class="simple-modal-content">
+            <div class="simple-modal-header">
+                <h3 id="simple-modal-title">Notification</h3>
+                <span class="simple-modal-close">&times;</span>
+            </div>
+            <div class="simple-modal-body">
+                <div class="simple-modal-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <p id="simple-modal-message">Message goes here</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/simple-modal.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
